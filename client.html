@@ -1,0 +1,36 @@
+<html>
+  <head>
+	<!-- Include socket.io from node_modules -->
+	<script src="/socket.io/socket.io.js"></script>
+	<!-- Include jquery from google CDN -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+	<script>
+	  //Declare socket.io variable.
+	  var socket = io.connect();
+	  //Receive message from server(via web socket).
+	  socket.on('date', function(data) {
+		$('#date').text(data.date);
+	  });
+	  $(document).ready(function(){
+		$('#text').keypress(function(e) {//Monitor keyboard character.
+			//Send message to server(via web socket).
+			socket.emit('clientData', {
+				'letter' : String.fromCharCode(e.charCode),
+				'content' : $('#text').val()
+			});
+		});
+		//Use button submit socket message.
+		$('#submit').click(function () {
+			socket.emit('clientData', {
+				'content' : $('#text').val()
+			})
+		});
+	  });
+	</script>
+	<div id="date"></div>
+	<textarea id="text"></textarea>
+	<button id = "submit">submit</button>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "ex01",
+  "version": "0.0.1",
+  "description": "Testing socket.io library()\u001b[Dexample01)",
+  "main": "ex01-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

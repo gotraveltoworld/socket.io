@@ -1,0 +1,27 @@
+Socket.io 測試範例說明
+
+Date : 2016-08-19 14:54
+Author : thlin.
+Description : 本文簡述利用socket.io library實現客戶端及伺服器端如何建立
+              web socket的過程。
+Reference site :
+https://blog.gtwang.org/programming/socket-io-node-js-realtime-app/
+
+Requirement：
+    1. Install nodeJS(please select your os platform)
+    2. Install socket.io(Use npm or other)
+    3. Create server.js and client.html
+Step :
+    1. Create http server(server.js)
+	2. Set http server router by path(server.js)
+	3. Set http page from file system by fs library(server.js)
+	4. Include socket.io library(server.js)
+	5. Create socket.io instance after http server listen(server.js).
+	6. Use 'socket.emit()' function to send message(date format)
+	   to user(server.js).
+	7. Declare socket instance at client.html(client.html).
+	8. Use 'socket.on()' function to receive server message and use jquery
+	   to assign in element(client.html).
+	9. Use 'socket.emit()' function to send message(from textarea) to server.
+	10.Use 'socket.on()' function to receive client message
+	   from client.html(server.js)
