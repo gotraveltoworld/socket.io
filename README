@@ -1,9 +1,9 @@
-Socket.io 測試範例說明
+Socket.io example description.
 
 Date : 2016-08-19 14:54
 Author : thlin.
-Description : 本文簡述利用socket.io library實現客戶端及伺服器端如何建立
-              web socket的過程。
+Description : The example use socket.io library to build client and server
+communication by web socket.
 Reference site :
 https://blog.gtwang.org/programming/socket-io-node-js-realtime-app/
 
