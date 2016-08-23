@@ -1,7 +1,6 @@
 Socket.io example description.
 
 Date : 2016-08-19 14:54
-Author : thlin.
 Description : The example use socket.io library to build client and server
 communication by web socket.
 Reference site :
